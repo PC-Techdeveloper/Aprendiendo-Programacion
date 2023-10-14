@@ -1,2 +1,2 @@
-# practica-desarrollo-web
+# curso-desarrollo-web
 html-css-javascript-python
