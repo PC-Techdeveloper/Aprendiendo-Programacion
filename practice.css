@@ -1,0 +1,12 @@
+.button {
+    border: none;
+    padding: 30px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #09f;
+    color: #fff;
+    cursor: pointer;
+    outline: 1px solid #000;
+}
+
+

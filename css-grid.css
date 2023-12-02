@@ -1,0 +1,93 @@
+/*CSS GRID*/
+/*
+- Grid es una cuadricula en un conjunto de líneas tanto horizontales como verticales para alinear los elementos en columnas y filas.
+
+CARACTERISTICAS:
+- Los elementos pueden tener tamaños fijos o flexibles.
+- Se puede posicionar elementos en cualquier sitio de la cuadricula.
+- Pueden poner elementos super-puestos (un elemento encima de otro usando grid).
+
+DIFERENCIA ENTRE FLEXBOX Y GRID:
+- flexbox -> Es un sistema de maquetación unidimensional, es decir, solo permite trabajar en un eje ya sea verticalmente o horizontalmente (row or columns).
+
+- grid -> Permite trabajar en los dos ejes row and column. bidimensional
+auto -> Navegador decide cual es el espacio que va a utilzar dependiendo del contenido.
+
+UNIDAD ESPECIAL:
+- fr -> Unidad especial que permite indicar el tamaño de las columnas de forma proporcional.
+
+MÉTODO REPEAT:
+- repeat(3,1fr) -> se repite las columnas de 1 fracción
+
+RESUTLADO DE BUSQUÉDA:
+- minmax() -> Tamaño mínimo y máximo para las filas y columnas, tamaño minímo y el resto se adecua al espacío que tenga disponible.
+
+ALINEACIÓN EN LÍNEA DE LOS ELEMENTOS:
+- 
+
+*/
+body {
+  background: #ccc;
+  font-family: monospace;
+}
+.container {
+  background: lightsalmon;
+  border: 3px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  /*creando tamaños -> cuadricula con grid*/
+  display: grid;
+  /*resultado de busqueda: tamaño mínimo y máximo para las filas y columnas*/
+  /*grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
+  /*columnas y filas de una cuadricula | fracciones | repeat*/
+  /*grid-template-columns: repeat(3,25px 50px);*/
+  /*grid-template-rows: repeat(3,100px);*/
+  grid-auto-rows: 50px;
+  grid-template-columns: 50px 50px 50px;
+  gap: 4px;
+  height: 300px;
+  width: 300px;
+  /*alinear los elementos en línea de los elementos-> justify-items -> stretch-default*/
+  /*justify-items: stretch;*/
+  /*alínear elementos en bloque de los elementos -> align-items -> stretch-default*/
+  /*align-items: stretch;*/
+  /*alinear contenido -> cuadricula */
+  justify-content: center; /*horizontalmente*/
+  align-content: center; /*verticalmente*/
+}
+/*EVIAR USAR MEDIA QUERY PARA RESPONSIVE*/
+/* @media (width > 500px) {
+  .container {
+    grid-template-columns: minmax(200px, 1fr) 1fr 1fr;
+  }
+} */
+
+.container div {
+  background: lightblue;
+  border: 2px solid #09f;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.container div:first-child {
+  background: greenyellow;
+  border: 2px solid green;
+  /*moviendo elementos en columnas y filas*/
+  /*grid-column: 1 / 3; /*ocupa dos columnas -> span 2 | 2 / 4 -> punto incial, punto final*/
+  /*grid-row: 1 / 3; /*ocupa dos filas -> span 2 | 2 / 3 -> punto inicial, punto final*/
+  z-index: 4;
+  /*alineando un mismo elemento en línea */
+  /*justify-self: end;*/
+}
+.container div:nth-child(2) {
+  background: lightseagreen;
+  border: 2px solid blue;
+  /*grid-column: 1 / 3; /*Permite valores negativos*/
+  /*grid-row: 1 / 3;*/
+  opacity: 0.5;
+}

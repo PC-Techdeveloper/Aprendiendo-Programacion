@@ -1,0 +1,119 @@
+/*resetear estilos*/
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/*herendando*/
+body {
+  background: #e2e6ff;
+  /*fuente | cambiar letra*/
+  font-family: "Cascadia Code Light", Arial, sans-serif;
+  /*resetear css de los navegadores para aplicar nuestros estilos*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  /*legacy rgba-> obsoleto*/
+  /* color: rgba(0, 0, 0, 0.5 ; */
+  /*nuevo formato moderno rgb:*/
+  /* color: rgb(0 0 0 / 50%); */
+  /* color: hsl(210, 45%, 35% ; */
+  /* color: oklch(47.48% 0.159 303.38 / 64.31%) */
+  /*hexadecimales con 3 digitos:*/
+  color: #09f;
+  /*current color: color del texto anterior*/
+  border-style: solid;
+  border-color: currentColor;
+  font-family: monospace;
+}
+/* clases: ESTILAR SIEMPRE CON CLASES*/
+.link {
+  color: red;
+}
+/* identificador: NO RECOMENDABLE ESTILAR*/
+#show,
+#hide {
+  background: #09f;
+  border: transparent;
+  color: #fff;
+}
+/*herencia:
+border: initial,revert,unset,(inherit -> hereda del padre)
+font-size: initial,revert(inherit)
+*/
+/*pseudo-clases: Situaciones especiales -> seudo clases
+border -> afecta al contenido
+outline -> Contorno que esta dibujando encima del contenido*/
+.link:hover {
+  outline: 10px solid red;
+}
+.link:active {
+  outline: 10px solid blue;
+}
+.link:focus {
+  border: 5px solid yellow;
+}
+li:first-child {
+  color: purple;
+}
+li:last-child {
+  color: green;
+}
+/*Selectores combinados:
+.class. .class*/
+.description .bold {
+  color: #09f;
+}
+.secondary .bold {
+  color: purple;
+}
+/*hijos directos: >*/
+article > p {
+  color: darkcyan;
+}
+/*después*/
+span ~ p {
+  color: red;
+}
+/*hermnanos directos*/
+p + span {
+  color: purple;
+}
+/*fallback: por si no admite el color distintos navegadores*/
+p {
+  /*fallback*/
+  color: #2c8d6f;
+  color: oklch(57.86% 0.1 168.78);
+}
+/*Especificidad: Determina que valores de una propiedad css son más relevantes para un elemento, y por lo tanto serán aplicados.*/
+
+/*Unidades relativas y absolutas
+px -> pixeles - absoluto
+em  
+rem 
+% -> porcentaje - relativa
+vh -> viewport -> altura
+vw -> viewport -> anchura 
+
+*/
+
+/*Modelo de cajas*/
+.container {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  padding: 20px;
+  margin-top: 25px;
+  margin-left: 15px;
+  border: 10px solid #09f;
+}
+/*los elementos en línea no se modifican su altura y su anchura*/
+.box {
+  background: red;
+  color: #fff;
+  margin-left: 20px;
+  padding: 10px;
+}

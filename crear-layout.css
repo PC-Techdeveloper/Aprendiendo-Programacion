@@ -1,0 +1,45 @@
+/*Creando un layout para un documento web*/
+/*EVIAR USAR LOS MEDIA QUERIES*/
+
+* {
+  margin: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 35px 1fr 100px;
+  min-height: 100vh; /*ocupa todo el tamaño*/
+  /*definir las areas de los elementos*/
+  grid-template-areas:
+    "header header sidebar"
+    "content content content"
+    "footer footer footer";
+}
+/*COMPOSICIÓN DE UNA CUADRICULA*/
+/*mobile responsive*/
+@media (width > 400px) {
+  .container {
+    grid-template-areas:
+      "header header ." /*con el . deja un hueco*/
+      "sidebar content content"
+      ". footer footer";
+  }
+}
+
+.container header {
+  background: #09f;
+  /*colcocar un nombre a cada elemento*/
+  grid-area: header;
+}
+.container aside {
+  background: yellow;
+  grid-area: sidebar;
+}
+.container main {
+  background: red;
+  grid-area: content;
+}
+.container footer {
+  background: orange;
+  grid-area: footer;
+}

@@ -1,0 +1,33 @@
+/*SEPARACIÓN CON GRID*/
+/*
+column-gap: 10px;
+column-row: 15px
+gap: 10px; (rows) 15px; (columns)
+gap: 16px; (rows and columns)
+
+RESPONSIVE CON GRID:
+PARA POCOS ELEMENTOS:
+- auto-fill -> RELLENANDO EL CONTENIDO
+- auto-fit -> AJUSTANDO EL CONTENIDO
+PARA MÁS DE UN ELEMENTO NO SE NOTA LA DIFERENCIA
+*/
+
+/*Responsive con GRID*/
+div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+    /*limitar el ancho máximo de columnas*/
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
