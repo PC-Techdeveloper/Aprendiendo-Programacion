@@ -1,0 +1,43 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/PC-Techdeveloper/Aprendiendo-Programacion/blob/main/Colab%20Google\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Area de un triángulo\n",
+        "b = int(input(\"Digite el valor de b: \"))\n",
+        "h = int(input(\"Digite el valor de h: \"))\n",
+        "\n",
+        "area_triangulo = (b * h) / 2\n",
+        "print(f\"El área del triángulo es: {area_triangulo}\")"
+      ],
+      "metadata": {
+        "id": "Uy2qdaYxk4ZV"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Te damos la bienvenida a Colaboratory",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
